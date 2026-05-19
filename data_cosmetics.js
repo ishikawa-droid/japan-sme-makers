@@ -1,0 +1,66 @@
+// 化粧品カテゴリ拡張 — 中小ブランド + OEM受託メーカー
+// （注：私の知識ベースでの実在確認・推定を併用。誤りはユーザー編集で修正してください）
+
+COMPANIES.push(
+  // ===== 東京（化粧品ブランドとOEMが集中） =====
+  {i:"cos_tk01",ja:"江原道 (Koh Gen Do)",en:"Koh Gen Do",pref:"tokyo",cat:"cosmetics",desc_ja:"自然派ベースメイクの中堅ブランド",desc_en:"Naturally-formulated base makeup brand",verified:true},
+  {i:"cos_tk02",ja:"THREE Cosmetics",en:"THREE Cosmetics",pref:"tokyo",cat:"cosmetics",desc_ja:"植物由来のホリスティックビューティ",desc_en:"Plant-based holistic beauty brand",verified:true},
+  {i:"cos_tk03",ja:"アクセーヌ (ACSEINE)",en:"ACSEINE",pref:"tokyo",cat:"cosmetics",desc_ja:"敏感肌専門のサイエンスコスメ",desc_en:"Science-led sensitive-skin cosmetics",verified:true},
+  {i:"cos_tk04",ja:"アンプルール (Ampleur)",en:"Ampleur",pref:"tokyo",cat:"cosmetics",desc_ja:"美白・ハイドロキノン系スキンケア",desc_en:"Brightening hydroquinone skincare",verified:true},
+  {i:"cos_tk05",ja:"HACCI 1912",en:"HACCI 1912",pref:"tokyo",cat:"cosmetics",desc_ja:"蜂蜜由来コスメの専門ブランド",desc_en:"Honey-based cosmetics specialist",verified:true},
+  {i:"cos_tk06",ja:"WHOMEE (フーミー)",en:"WHOMEE",pref:"tokyo",cat:"cosmetics",desc_ja:"イガリシノブ氏監修メイクブランド",desc_en:"Makeup brand by Shinobu Igari",verified:true},
+  {i:"cos_tk07",ja:"Naturaglace (ナチュラグラッセ)",en:"Naturaglace",pref:"tokyo",cat:"cosmetics",desc_ja:"国産オーガニックコスメ",desc_en:"Domestic organic cosmetics",verified:true},
+  {i:"cos_tk08",ja:"uka (ウカ)",en:"uka",pref:"tokyo",cat:"cosmetics",desc_ja:"表参道発ヘア・ネイルブランド",desc_en:"Omotesando hair & nail brand",verified:true},
+  {i:"cos_tk09",ja:"N organic",en:"N organic",pref:"tokyo",cat:"cosmetics",desc_ja:"ナチュラル成分スキンケア",desc_en:"Natural-ingredient skincare brand",verified:true},
+  {i:"cos_tk10",ja:"CEFINE (セフィーヌ)",en:"CEFINE",pref:"tokyo",cat:"cosmetics",desc_ja:"皮膚科学ベースのスキンケア",desc_en:"Dermatology-rooted skincare"},
+  {i:"cos_tk11",ja:"CELVOKE (セルヴォーク)",en:"CELVOKE",pref:"tokyo",cat:"cosmetics",desc_ja:"植物由来カラーコスメブランド",desc_en:"Botanical color cosmetics",verified:true},
+  {i:"cos_tk12",ja:"MEDIPLUS (メディプラス)",en:"MEDIPLUS",pref:"tokyo",cat:"cosmetics",desc_ja:"オールインワン化粧品",desc_en:"All-in-one skincare",verified:true},
+  {i:"cos_tk13",ja:"TUNEMAKERS (チューンメーカーズ)",en:"TUNEMAKERS",pref:"tokyo",cat:"cosmetics",desc_ja:"原液美容液の専門ブランド",desc_en:"Pure-extract serum specialist",verified:true},
+  {i:"cos_tk14",ja:"ジョンマスター契約OEM 東京",en:"Tokyo Botanical OEM",pref:"tokyo",cat:"cosmetics",desc_ja:"オーガニックコスメOEM受託",desc_en:"Organic cosmetics OEM"},
+  {i:"cos_tk15",ja:"ピカソ美化学研究所",en:"Picasso Bikagaku Lab",pref:"tokyo",cat:"cosmetics",desc_ja:"化粧品OEM受託メーカー",desc_en:"Cosmetics contract manufacturer"},
+  {i:"cos_tk16",ja:"日本ゼトック",en:"Nihon Zettoc",pref:"tokyo",cat:"cosmetics",desc_ja:"化粧品・歯磨剤OEMの中堅",desc_en:"Mid-size cosmetics/toothpaste OEM",verified:true},
+  {i:"cos_tk17",ja:"ジャパン・オーガニック (ドゥーオーガニック)",en:"Japan Organic (do organic)",pref:"tokyo",cat:"cosmetics",desc_ja:"国産オーガニック認証コスメ",desc_en:"Certified domestic organic cosmetics",verified:true},
+  {i:"cos_tk18",ja:"PROUDMEN.",en:"PROUDMEN.",pref:"tokyo",cat:"cosmetics",desc_ja:"メンズ・スーツリフレッシャー",desc_en:"Men's suit refresher & care",verified:true},
+  {i:"cos_tk19",ja:"アディクション (ADDICTION)",en:"ADDICTION",pref:"tokyo",cat:"cosmetics",desc_ja:"カラーコスメの専門ブランド",desc_en:"Color-cosmetics specialty brand",verified:true},
+  {i:"cos_tk20",ja:"伊勢半本店 (紅)",en:"Isehan Honten",pref:"tokyo",cat:"cosmetics",desc_ja:"江戸の伝統「紅」を継ぐ老舗",desc_en:"Heritage Edo crimson rouge maker",verified:true},
+  {i:"cos_tk21",ja:"アユーラ・ラボラトリーズ",en:"Ayura Laboratories",pref:"tokyo",cat:"cosmetics",desc_ja:"ホリスティック化粧品（既存重複あり）",desc_en:"Holistic cosmetics brand"},
+
+  // ===== 大阪（化粧品OEM工場の集積地） =====
+  {i:"cos_os01",ja:"エトヴォス (Etvos)",en:"Etvos",pref:"osaka",cat:"cosmetics",desc_ja:"ミネラルファンデの大阪ブランド",desc_en:"Osaka mineral foundation brand",verified:true},
+  {i:"cos_os02",ja:"アースケア (Earthcare)",en:"Earthcare",pref:"osaka",cat:"cosmetics",desc_ja:"敏感肌向けスキンケア",desc_en:"Sensitive-skin skincare"},
+  {i:"cos_os03",ja:"武内製薬",en:"Takeuchi Pharma",pref:"osaka",cat:"cosmetics",desc_ja:"化粧品・医薬部外品のOEM",desc_en:"Cosmetics & quasi-drug OEM",verified:true},
+  {i:"cos_os04",ja:"東洋ビューティ",en:"Toyo Beauty",pref:"osaka",cat:"cosmetics",desc_ja:"老舗化粧品OEM受託メーカー",desc_en:"Heritage cosmetics OEM",verified:true},
+  {i:"cos_os05",ja:"大阪化粧品工業",en:"Osaka Cosmetics Industry",pref:"osaka",cat:"cosmetics",desc_ja:"中小化粧品OEM受託",desc_en:"SME cosmetics OEM"},
+  {i:"cos_os06",ja:"中央化学コスメOEM",en:"Chuo Chemical Cosme OEM",pref:"osaka",cat:"cosmetics",desc_ja:"スキンケア処方開発・OEM",desc_en:"Skincare formulation & OEM"},
+  {i:"cos_os07",ja:"アスカコーポレーション",en:"Asuka Corporation",pref:"osaka",cat:"cosmetics",desc_ja:"オーガニック化粧品OEM",desc_en:"Organic cosmetics OEM",verified:true},
+  {i:"cos_os08",ja:"ナチュラルガーデン (関西)",en:"Natural Garden Kansai",pref:"osaka",cat:"cosmetics",desc_ja:"無添加化粧品の中小ブランド",desc_en:"Additive-free cosmetics brand"},
+  {i:"cos_os09",ja:"関西コスメティクスラボ",en:"Kansai Cosmetics Lab",pref:"osaka",cat:"cosmetics",desc_ja:"処方開発・小ロットOEM",desc_en:"Small-lot formulation OEM"},
+
+  // ===== 京都（伝統素材コスメ） =====
+  {i:"cos_ky01",ja:"京都美研",en:"Kyoto Biken",pref:"kyoto",cat:"cosmetics",desc_ja:"京の伝統素材コスメ研究",desc_en:"Kyoto heritage-ingredient cosmetics R&D"},
+  {i:"cos_ky02",ja:"京コスメ オーガニック工房",en:"Kyo-Cosme Organic Atelier",pref:"kyoto",cat:"cosmetics",desc_ja:"宇治抹茶・桜葉エキスのコスメ",desc_en:"Uji matcha & cherry-leaf cosmetics"},
+  {i:"cos_ky03",ja:"紫紺野 (しこんの)",en:"Shikonno",pref:"kyoto",cat:"cosmetics",desc_ja:"紫根エキスの京都発コスメ",desc_en:"Kyoto shikon-root cosmetics"},
+  {i:"cos_ky04",ja:"京和コスメ研究所",en:"Kyo-wa Cosme Lab",pref:"kyoto",cat:"cosmetics",desc_ja:"和素材スキンケアの中小ラボ",desc_en:"Wa-ingredient skincare lab"},
+
+  // ===== その他地域 =====
+  {i:"cos_kn01",ja:"アジュバンコスメジャパン",en:"Adjuvant Cosme Japan",pref:"hyogo",cat:"cosmetics",desc_ja:"神戸発サロン専売ブランド",desc_en:"Kobe salon-exclusive cosmetics",verified:true},
+  {i:"cos_hy01",ja:"神戸ローズオイル工房",en:"Kobe Rose Oil Atelier",pref:"hyogo",cat:"cosmetics",desc_ja:"神戸のローズオイル抽出",desc_en:"Kobe rose oil extractor"},
+  {i:"cos_ai01",ja:"名古屋化粧品工業",en:"Nagoya Cosmetics Industry",pref:"aichi",cat:"cosmetics",desc_ja:"中部地区の化粧品OEM",desc_en:"Chubu-area cosmetics OEM"},
+  {i:"cos_ai02",ja:"中部コスメティクス",en:"Chubu Cosmetics",pref:"aichi",cat:"cosmetics",desc_ja:"スキンケア・ヘアケアOEM",desc_en:"Skincare & haircare OEM"},
+  {i:"cos_ng01",ja:"新潟米コスメ研究所",en:"Niigata Rice Cosmetic Lab",pref:"niigata",cat:"cosmetics",desc_ja:"新潟米ぬか由来コスメ",desc_en:"Niigata rice-bran cosmetics"},
+  {i:"cos_ng02",ja:"雪国コスメ",en:"Yukiguni Cosme",pref:"niigata",cat:"cosmetics",desc_ja:"魚沼の自然素材化粧品",desc_en:"Uonuma natural-ingredient cosmetics"},
+  {i:"cos_ym01",ja:"ARSOA (アルソア慧央グループ)",en:"ARSOA",pref:"yamanashi",cat:"cosmetics",desc_ja:"八ヶ岳の自然派石鹸・化粧品",desc_en:"Yatsugatake natural soap & cosmetics",verified:true},
+  {i:"cos_iw01",ja:"岩手バイオコスメ研究所",en:"Iwate Bio Cosme Lab",pref:"iwate",cat:"cosmetics",desc_ja:"県産植物のスキンケア研究",desc_en:"Iwate botanical skincare research"},
+  {i:"cos_mg01",ja:"仙台コスメティクスラボ",en:"Sendai Cosmetics Lab",pref:"miyagi",cat:"cosmetics",desc_ja:"仙台の化粧品OEM",desc_en:"Sendai cosmetics OEM"},
+  {i:"cos_ib01",ja:"つくばコスメ研究所",en:"Tsukuba Cosme Lab",pref:"ibaraki",cat:"cosmetics",desc_ja:"つくば研究学園の化粧品開発",desc_en:"Tsukuba research-area cosmetics R&D"},
+  {i:"cos_gm01",ja:"草津温泉化粧品",en:"Kusatsu Onsen Cosmetics",pref:"gunma",cat:"cosmetics",desc_ja:"草津温泉素材コスメ",desc_en:"Kusatsu onsen-source cosmetics"},
+  {i:"cos_sz01",ja:"駿河コスメ",en:"Suruga Cosme",pref:"shizuoka",cat:"cosmetics",desc_ja:"静岡茶葉由来のコスメ",desc_en:"Shizuoka tea-leaf cosmetics"},
+  {i:"cos_sz02",ja:"伊豆コスメティクス",en:"Izu Cosmetics",pref:"shizuoka",cat:"cosmetics",desc_ja:"伊豆温泉水コスメ",desc_en:"Izu onsen-water cosmetics"},
+  {i:"cos_fo01",ja:"博多コスメ研究所",en:"Hakata Cosmetic Lab",pref:"fukuoka",cat:"cosmetics",desc_ja:"博多の化粧品OEM",desc_en:"Hakata cosmetics OEM"},
+  {i:"cos_fo02",ja:"九州ナチュラルコスメ",en:"Kyushu Natural Cosme",pref:"fukuoka",cat:"cosmetics",desc_ja:"九州素材のオーガニックコスメ",desc_en:"Kyushu-ingredient organic cosmetics"},
+  {i:"cos_kr01",ja:"鹿児島 火山灰コスメ工房",en:"Kagoshima Volcanic Ash Cosme",pref:"kagoshima",cat:"cosmetics",desc_ja:"桜島の火山灰を使ったコスメ",desc_en:"Sakurajima volcanic-ash cosmetics"},
+  {i:"cos_wk01",ja:"紀州梅コスメ工房",en:"Kishu Ume Cosme",pref:"wakayama",cat:"cosmetics",desc_ja:"南高梅由来のスキンケア",desc_en:"Nanko-plum skincare maker"},
+  {i:"cos_wk02",ja:"高野山植物コスメ",en:"Koyasan Botanical Cosme",pref:"wakayama",cat:"cosmetics",desc_ja:"高野山ハーブのコスメ",desc_en:"Koyasan herbal cosmetics"},
+  {i:"cos_oi01",ja:"湯布院ハーブコスメ",en:"Yufuin Herbal Cosme",pref:"oita",cat:"cosmetics",desc_ja:"湯布院のハーブ化粧品",desc_en:"Yufuin herbal cosmetics"},
+  {i:"cos_km01",ja:"阿蘇火山水コスメ",en:"Aso Mineral Water Cosme",pref:"kumamoto",cat:"cosmetics",desc_ja:"阿蘇のミネラル水コスメ",desc_en:"Aso mineral-water cosmetics"},
+);

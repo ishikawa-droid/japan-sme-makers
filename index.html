@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>ニッポンメイカーズ | Nippon Makers - Japanese SME Manufacturers</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <span class="logo">🏭</span>
+        <div>
+          <h1 data-i18n="title">ニッポンメイカーズ</h1>
+          <p class="tagline" data-i18n="tagline">日本の中小ものづくり、世界へ。</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="deleted-btn" class="deleted-btn hidden">🗑 削除済み (0)</button>
+        <button id="add-btn" class="add-btn" data-i18n="addCompany">＋ 会社を追加</button>
+        <div class="lang-toggle">
+          <button id="lang-ja" class="lang-btn active">日本語</button>
+          <button id="lang-en" class="lang-btn">English</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="filters">
+      <div class="search-row">
+        <input
+          id="search"
+          type="text"
+          placeholder="会社名・商品・キーワードで検索…"
+          data-i18n-placeholder="searchPlaceholder"
+        />
+        <button id="reset-btn" data-i18n="reset">リセット</button>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-group">
+          <label data-i18n="region">地域</label>
+          <select id="region-filter">
+            <option value="" data-i18n="allRegions">すべての地域</option>
+            <option value="hokkaido">北海道 / Hokkaido</option>
+            <option value="tohoku">東北 / Tohoku</option>
+            <option value="kanto">関東 / Kanto</option>
+            <option value="chubu">中部 / Chubu</option>
+            <option value="kansai">関西 / Kansai</option>
+            <option value="chugoku">中国 / Chugoku</option>
+            <option value="shikoku">四国 / Shikoku</option>
+            <option value="kyushu">九州 / Kyushu</option>
+            <option value="okinawa">沖縄 / Okinawa</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label data-i18n="prefecture">都道府県</label>
+          <select id="prefecture-filter">
+            <option value="" data-i18n="allPrefectures">すべて</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label data-i18n="category">カテゴリ</label>
+          <select id="category-filter">
+            <option value="" data-i18n="allCategories">すべて</option>
+          </select>
+        </div>
+
+        <div class="filter-group toggle-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="fav-only" />
+            <span data-i18n="favOnly">★ お気に入りのみ</span>
+          </label>
+        </div>
+
+        <div class="filter-group toggle-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="user-only" />
+            <span data-i18n="userOnly">＋ 追加した会社のみ</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-info">
+      <span class="results-count">
+        <span id="result-count">0</span>
+        <span class="separator">/</span>
+        <span id="total-count">0</span>
+        <span data-i18n="resultsLabel">社</span>
+      </span>
+    </section>
+
+    <section id="cards" class="cards"></section>
+
+    <div class="load-more-wrap">
+      <button id="load-more" class="load-more hidden" data-i18n="loadMore">もっと見る</button>
+    </div>
+
+    <div id="empty" class="empty hidden">
+      <p data-i18n="empty">条件に合う会社が見つかりませんでした。</p>
+    </div>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="add-modal" class="modal hidden">
+    <div class="modal-content add-modal-content">
+      <button class="modal-close" id="add-modal-close">×</button>
+      <div class="add-modal-body">
+        <h2 data-i18n="addTitle">会社を追加</h2>
+        <p class="add-hint" data-i18n="addHint">ホームページURLを貼ると、社名・説明・ロゴ写真を自動取得します。</p>
+
+        <div class="add-section">
+          <label data-i18n="addUrlLabel">ホームページURL（任意・取得失敗時は手動入力でOK）</label>
+          <div class="url-row">
+            <input id="add-url" type="url" placeholder="https://example.co.jp" />
+            <button id="add-fetch-btn" data-i18n="addFetch">取得</button>
+          </div>
+          <div id="add-fetch-status" class="add-status"></div>
+          <div id="add-warning" class="add-warning hidden"></div>
+        </div>
+
+        <div class="add-section">
+          <label data-i18n="addNameJa">会社名（日本語） <span class="req">*</span></label>
+          <input id="add-name-ja" type="text" />
+        </div>
+
+        <div class="add-section">
+          <label data-i18n="addNameEn">Company name (English)</label>
+          <input id="add-name-en" type="text" placeholder="(空欄なら自動英訳)" />
+        </div>
+
+        <div class="add-section grid-2">
+          <div>
+            <label data-i18n="addPref">都道府県 <span class="req">*</span></label>
+            <select id="add-pref"></select>
+          </div>
+          <div>
+            <label data-i18n="addCat">カテゴリ <span class="req">*</span></label>
+            <select id="add-cat"></select>
+          </div>
+        </div>
+
+        <div class="add-section">
+          <label data-i18n="addDesc">説明（製品・特徴）</label>
+          <textarea id="add-desc" rows="3"></textarea>
+        </div>
+
+        <div class="add-section">
+          <label data-i18n="addPhoto">写真（任意・複数可）</label>
+          <input id="add-photo" type="file" accept="image/*" multiple />
+          <div id="add-photo-preview" class="photo-preview"></div>
+        </div>
+
+        <div class="add-section grid-2">
+          <div>
+            <label data-i18n="addEmployees">従業員数（任意）</label>
+            <input id="add-employees" type="number" min="0" placeholder="例: 25" />
+          </div>
+          <div>
+            <label data-i18n="addCapital">資本金（万円・任意）</label>
+            <input id="add-capital" type="number" min="0" placeholder="例: 1000" />
+          </div>
+        </div>
+
+        <div class="add-actions">
+          <button id="add-cancel-btn" class="btn-secondary" data-i18n="cancel">キャンセル</button>
+          <button id="add-save-btn" class="btn-primary" data-i18n="save">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p data-i18n="footer">
+      ニッポンメイカーズ — 中小ものづくり企業ディレクトリ。ホームページ情報は AllOrigins 経由で取得。
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="data2.js"></script>
+  <script src="data3.js"></script>
+  <script src="data_cosmetics.js"></script>
+  <script src="data_urls.js"></script>
+  <script src="excluded.js"></script>
+  <script src="ogp.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
