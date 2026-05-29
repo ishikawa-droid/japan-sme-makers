@@ -8,12 +8,16 @@ const LS_USER    = "nm_user_companies_v1";
 const LS_FAV     = "nm_favs_v1";
 const LS_LANG    = "nm_lang_v1";
 const LS_DELETED = "nm_deleted_v1";
+const LS_IMAGES      = "nm_custom_images_v1";
+const LS_AUTO_IMAGES = "nm_auto_images_v1";
 
 const state = {
   lang: localStorage.getItem(LS_LANG) || "ja",
   favorites: new Set(JSON.parse(localStorage.getItem(LS_FAV) || "[]")),
   userCompanies: JSON.parse(localStorage.getItem(LS_USER) || "[]"),
   deletedIds: new Set(JSON.parse(localStorage.getItem(LS_DELETED) || "[]")),
+  customImages: JSON.parse(localStorage.getItem(LS_IMAGES) || "{}"),
+  autoImages:   JSON.parse(localStorage.getItem(LS_AUTO_IMAGES) || "{}"),
   filters: {
     search: "",
     region: "",
@@ -28,10 +32,36 @@ const state = {
     photos: [],
     fetchData: null,
   },
+  imgModalId: null,
 };
 
 function saveDeleted() {
   localStorage.setItem(LS_DELETED, JSON.stringify([...state.deletedIds]));
+}
+function saveCustomImages() {
+  localStorage.setItem(LS_IMAGES, JSON.stringify(state.customImages));
+}
+function saveAutoImages() {
+  localStorage.setItem(LS_AUTO_IMAGES, JSON.stringify(state.autoImages));
+}
+function getCompanyPhotos(c) {
+  const custom  = state.customImages[c.i] || [];
+  const ai      = state.autoImages[c.i];
+  const auto    = (ai && ai !== "none" && ai !== "loading") ? [ai] : [];
+  const builtin = c.photos || (c.photo ? [c.photo] : []);
+  const seen = new Set();
+  return [...custom, ...auto, ...builtin].filter(u => { if (seen.has(u)) return false; seen.add(u); return true; });
+}
+function addCustomImage(id, src) {
+  if (!state.customImages[id]) state.customImages[id] = [];
+  state.customImages[id].unshift(src);
+  saveCustomImages();
+}
+function removeCustomImage(id, idx) {
+  if (!state.customImages[id]) return;
+  state.customImages[id].splice(idx, 1);
+  if (!state.customImages[id].length) delete state.customImages[id];
+  saveCustomImages();
 }
 function deleteCompany(id) {
   const company = allCompaniesRaw().find(c => c.i === id);
@@ -301,7 +331,8 @@ function createCard(c) {
   const isFav = state.favorites.has(c.i);
   const prefInfo = PREFECTURES[c.pref];
   const emoji = categoryEmoji(c.cat);
-  const photo = c.photo || (c.photos && c.photos[0]) || null;
+  const photos = getCompanyPhotos(c);
+  const photo = photos[0] || null;
   const site = getWebsiteUrl(c);
   const siteLabel = site.isSearch
     ? (state.lang === "ja" ? "🔎 公式サイトを検索" : "🔎 Find website")
@@ -314,6 +345,9 @@ function createCard(c) {
     <div class="card-image" data-emoji="${emoji}">
       <span class="card-emoji">${emoji}</span>
       ${photo ? `<img class="card-img" loading="lazy" alt="${escapeHtml(getName(c))}" src="${escapeAttr(photo)}" />` : ""}
+      <button class="card-img-add ${photo ? "has-img" : "no-img"}" aria-label="${state.lang === "ja" ? "画像を追加" : "Add image"}">
+        ${photo ? "📷" : `<span class="card-img-add-icon">📷</span><span class="card-img-add-label">${state.lang === "ja" ? "画像を追加" : "Add image"}</span>`}
+      </button>
       <div class="card-badges">
         ${c.verified ? `<span class="card-badge verified" title="${I18N[state.lang].verified}">✓</span>` : ""}
         ${c.userAdded ? `<span class="card-badge user" title="${I18N[state.lang].userAdded}">＋</span>` : ""}
@@ -321,6 +355,7 @@ function createCard(c) {
       <button class="card-fav ${isFav ? "active" : ""}" aria-label="favorite" data-id="${c.i}">
         ${isFav ? "★" : "☆"}
       </button>
+      <button class="card-delete" aria-label="delete" data-id="${c.i}" title="${state.lang === 'ja' ? '削除' : 'Delete'}">🗑</button>
     </div>
     <div class="card-body">
       <div class="card-region">${prefInfo[state.lang]} · ${categoryLabel(c.cat)}</div>
@@ -337,11 +372,32 @@ function createCard(c) {
     e.stopPropagation();
     toggleFavorite(c.i);
   });
+  card.querySelector(".card-img-add").addEventListener("click", (e) => {
+    e.stopPropagation();
+    openImgModal(c);
+  });
+  card.querySelector(".card-delete").addEventListener("click", (e) => {
+    e.stopPropagation();
+    const msg = state.lang === "ja"
+      ? `「${getName(c)}」を削除しますか？\n${c.userAdded ? "（完全に削除されます）" : "（削除済みパネルから復元できます）"}`
+      : `Delete "${getName(c)}"?\n${c.userAdded ? "(Permanent)" : "(Can restore from Deleted panel)"}`;
+    if (confirm(msg)) {
+      deleteCompany(c.i);
+      updateDeletedBtn();
+      render();
+    }
+  });
   card.querySelector(".card-site").addEventListener("click", (e) => {
     e.stopPropagation(); // カード本体のクリック（モーダル）を抑制
   });
 
   card.addEventListener("click", () => showDetail(c));
+
+  // URLがあり画像未取得のカードを自動取得キューへ
+  if (c.url && getCompanyPhotos(c).length === 0 && state.autoImages[c.i] === undefined) {
+    imgObserver.observe(card);
+  }
+
   return card;
 }
 
@@ -356,7 +412,7 @@ function showDetail(c) {
   const isFav = state.favorites.has(c.i);
   const prefInfo = PREFECTURES[c.pref];
   const emoji = categoryEmoji(c.cat);
-  const photos = c.photos || (c.photo ? [c.photo] : []);
+  const photos = getCompanyPhotos(c);
   const mainPhoto = photos[0] || null;
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((c.ja || "") + " " + prefInfo.ja)}`;
 
@@ -406,6 +462,7 @@ function showDetail(c) {
           ${isFav ? "★ " + dict.removeFav : "☆ " + dict.addFav}
         </button>
         <button class="modal-action-btn delete-btn" id="modal-delete-btn">🗑 ${dict.delete}</button>
+        <button class="modal-action-btn img-edit-btn" id="modal-img-edit-btn">📷 ${state.lang === "ja" ? "画像を追加" : "Add image"}</button>
       </div>
     </div>
   `;
@@ -429,6 +486,8 @@ function showDetail(c) {
     });
   }
 
+  document.getElementById("modal-img-edit-btn")?.addEventListener("click", () => openImgModal(c));
+
   el.modal.classList.remove("hidden");
 }
 
@@ -438,6 +497,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     el.modal.classList.add("hidden");
     el.addModal.classList.add("hidden");
+    document.getElementById("img-modal")?.classList.add("hidden");
   }
 });
 
@@ -754,6 +814,123 @@ function openDeletedPanel() {
 
 const deletedBtn = document.getElementById("deleted-btn");
 if (deletedBtn) deletedBtn.addEventListener("click", openDeletedPanel);
+
+// ===== 自動画像取得（IntersectionObserver） =====
+const imgObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    imgObserver.unobserve(entry.target);
+    const id = entry.target.dataset.companyId;
+    const company = allCompaniesRaw().find(c => c.i === id);
+    if (company?.url && state.autoImages[id] === undefined) {
+      autoFetchImage(company);
+    }
+  });
+}, { rootMargin: "80px" });
+
+async function autoFetchImage(c) {
+  if (state.autoImages[c.i] !== undefined) return;
+  state.autoImages[c.i] = "loading";
+  const result = await OgpFetcher.fetchSite(c.url, () => {});
+  const imgUrl = result.ok ? (result.data?.image || result.data?.favicon || null) : null;
+  state.autoImages[c.i] = imgUrl || "none";
+  saveAutoImages();
+  if (imgUrl) {
+    const cardEl = Array.from(document.querySelectorAll(".card"))
+      .find(el => el.dataset.companyId === c.i);
+    if (cardEl) applyAutoImageToCard(cardEl, imgUrl, getName(c));
+  }
+}
+
+function applyAutoImageToCard(cardEl, imgUrl, altText) {
+  const cardImage = cardEl.querySelector(".card-image");
+  if (!cardImage || cardImage.querySelector(".card-img")) return;
+  const img = document.createElement("img");
+  img.className = "card-img";
+  img.loading = "lazy";
+  img.alt = altText || "";
+  img.src = imgUrl;
+  const emoji = cardImage.querySelector(".card-emoji");
+  if (emoji) emoji.after(img);
+  else cardImage.prepend(img);
+  const imgAdd = cardEl.querySelector(".card-img-add");
+  if (imgAdd) {
+    imgAdd.className = "card-img-add has-img";
+    imgAdd.innerHTML = "📷";
+  }
+}
+
+// ===== 画像モーダル =====
+function openImgModal(c) {
+  state.imgModalId = c.i;
+  const titleEl = document.getElementById("img-modal-title");
+  const hintEl  = document.getElementById("img-modal-hint");
+  const urlInput = document.getElementById("img-modal-url");
+  if (titleEl)  titleEl.textContent  = getName(c);
+  if (hintEl)   hintEl.textContent   = state.lang === "ja"
+    ? "URLを貼るかファイルをアップロード（LocalStorageに保存）"
+    : "Paste a URL or upload a file (saved in LocalStorage)";
+  if (urlInput) urlInput.value = "";
+  renderImgModalPreview();
+  document.getElementById("img-modal").classList.remove("hidden");
+}
+
+function renderImgModalPreview() {
+  const id = state.imgModalId;
+  const preview = document.getElementById("img-modal-preview");
+  if (!preview) return;
+  const imgs = state.customImages[id] || [];
+  preview.innerHTML = "";
+  if (imgs.length === 0) {
+    preview.innerHTML = `<p style="font-size:12px;color:var(--text-light);grid-column:1/-1;">${state.lang === "ja" ? "追加した画像はありません" : "No images added yet"}</p>`;
+    return;
+  }
+  imgs.forEach((src, idx) => {
+    const wrap = document.createElement("div");
+    wrap.className = "photo-thumb";
+    wrap.innerHTML = `<img src="${escapeAttr(src)}" alt="photo ${idx+1}"><button class="photo-remove" data-idx="${idx}">×</button>`;
+    wrap.querySelector(".photo-remove").addEventListener("click", (e) => {
+      e.stopPropagation();
+      removeCustomImage(id, Number(e.currentTarget.dataset.idx));
+      renderImgModalPreview();
+      render(true);
+    });
+    preview.appendChild(wrap);
+  });
+}
+
+document.getElementById("img-modal-close")?.addEventListener("click", () => {
+  document.getElementById("img-modal").classList.add("hidden");
+});
+document.getElementById("img-modal")?.addEventListener("click", (e) => {
+  if (e.target === document.getElementById("img-modal"))
+    document.getElementById("img-modal").classList.add("hidden");
+});
+document.getElementById("img-modal-url-btn")?.addEventListener("click", () => {
+  const id = state.imgModalId;
+  if (!id) return;
+  const input = document.getElementById("img-modal-url");
+  const url = input?.value.trim();
+  if (!url) return;
+  addCustomImage(id, url);
+  if (input) input.value = "";
+  renderImgModalPreview();
+  render(true);
+});
+document.getElementById("img-modal-file")?.addEventListener("change", (e) => {
+  const id = state.imgModalId;
+  if (!id) return;
+  Array.from(e.target.files || []).forEach(file => {
+    if (!file.type.startsWith("image/")) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      addCustomImage(id, ev.target.result);
+      renderImgModalPreview();
+      render(true);
+    };
+    reader.readAsDataURL(file);
+  });
+});
 
 // ===== 初期化 =====
 applyLanguage();

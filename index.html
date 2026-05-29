@@ -183,6 +183,25 @@
     </div>
   </div>
 
+  <div id="img-modal" class="modal hidden">
+    <div class="modal-content img-modal-content">
+      <button class="modal-close" id="img-modal-close">×</button>
+      <div class="img-modal-body">
+        <h3 id="img-modal-title"></h3>
+        <p class="add-hint" id="img-modal-hint"></p>
+        <div class="url-row">
+          <input type="url" id="img-modal-url" placeholder="https://example.com/photo.jpg" />
+          <button id="img-modal-url-btn">URLで追加</button>
+        </div>
+        <label class="img-file-label" style="display:block;text-align:center;margin:10px 0 0;">
+          <input type="file" id="img-modal-file" accept="image/*" multiple />
+          📁 ファイルをアップロード
+        </label>
+        <div id="img-modal-preview" class="photo-preview" style="margin-top:14px;"></div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <p data-i18n="footer">
       ニッポンメイカーズ — 中小ものづくり企業ディレクトリ。ホームページ情報は AllOrigins 経由で取得。

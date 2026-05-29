@@ -264,6 +264,68 @@ main {
 .card-fav.active { color: var(--gold); }
 .card-fav:hover { transform: scale(1.1); }
 
+.card-delete {
+  position: absolute;
+  bottom: 8px; right: 8px;
+  width: 28px; height: 28px;
+  border: none;
+  background: rgba(255,255,255,.88);
+  border-radius: 50%;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity .15s, transform .1s;
+  pointer-events: none;
+}
+.card:hover .card-delete { opacity: 1; pointer-events: auto; }
+.card-delete:hover { transform: scale(1.1); background: var(--accent); color: #fff; }
+
+/* ===== カード画像追加ボタン ===== */
+.card-img-add {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-img-add.no-img {
+  inset: 0;
+  gap: 5px;
+  background: transparent;
+  color: var(--muted);
+}
+.card-img-add.no-img:hover {
+  background: rgba(27, 58, 91, .07);
+  color: var(--indigo);
+}
+.card-img-add-icon { font-size: 26px; display: block; }
+.card-img-add-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  transition: opacity .15s;
+}
+.card-img-add.no-img:hover .card-img-add-label { opacity: 1; }
+.card-img-add.has-img {
+  bottom: 8px; left: 8px;
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,.88);
+  border-radius: 50%;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+}
+.card:hover .card-img-add.has-img { opacity: 1; pointer-events: auto; }
+.card-img-add.has-img:hover { background: var(--indigo-soft); }
+
 .card-body { padding: 14px; flex: 1; display: flex; flex-direction: column; }
 .card-region { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
 .card-title { font-weight: 700; font-size: 15px; margin-bottom: 6px; color: var(--text); line-height: 1.35; }
@@ -428,6 +490,28 @@ main {
 .fav-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
 .delete-btn { background: #fff; color: var(--accent); border-color: var(--accent); }
 .delete-btn:hover { background: var(--accent); color: #fff; }
+.img-edit-btn { background: #fff; color: var(--indigo); border-color: var(--indigo); }
+.img-edit-btn:hover { background: var(--indigo); color: #fff; }
+
+/* ===== 画像モーダル ===== */
+.img-modal-content { max-width: 400px; }
+.img-modal-body { padding: 28px; }
+.img-modal-body h3 { font-size: 17px; font-weight: 700; margin: 0 0 4px; }
+.img-modal-body .add-hint { color: var(--text-light); font-size: 12px; margin: 0 0 16px; line-height: 1.5; }
+.img-file-label {
+  display: block;
+  text-align: center;
+  padding: 9px 14px;
+  background: #fff;
+  border: 1px dashed var(--border);
+  border-radius: 7px;
+  font-size: 13px;
+  color: var(--text-light);
+  cursor: pointer;
+  margin-top: 10px;
+}
+.img-file-label:hover { border-color: var(--indigo); color: var(--indigo); }
+.img-file-label input[type="file"] { display: none; }
 
 /* ===== 追加モーダル ===== */
 .add-modal-content { max-width: 620px; }
