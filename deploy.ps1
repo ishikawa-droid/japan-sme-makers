@@ -4,7 +4,7 @@ Set-Location $PSScriptRoot
 
 $status = git status --porcelain
 if (-not $status) {
-    Write-Host "変更なし" -ForegroundColor Yellow
+    Write-Host "No changes." -ForegroundColor Yellow
     exit 0
 }
 
@@ -16,4 +16,4 @@ git add -A
 git commit -m $Message
 git push origin main
 
-Write-Host "デプロイ完了！" -ForegroundColor Green
+Write-Host "Done!" -ForegroundColor Green
