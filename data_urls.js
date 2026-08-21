@@ -585,6 +585,207 @@ const KNOWN_URLS = {
   "cos_os07": "https://www.asuka-corp.co.jp/",
   "cos_kn01": "https://www.adjuvant.co.jp/",
   "cos_ym01": "https://www.arsoa.co.jp/",
+
+  // === 2026-08-22 追加：URL未収録だった600社の実在調査で判明した公式サイト（197社） ===
+  // 調査結果の正本 = 実在調査-600社-20260822.tsv
+  // ⚠ 県・社名・業種に不一致があった33社は意図的に除外（TSVの根拠欄に🔴で明記）
+  "hk003": "https://www.yotsuba.co.jp/",  // よつ葉乳業（北海道）
+  "hk016": "https://kamikawa-taisetsu.co.jp/",  // 上川大雪酒造（北海道）
+  "hk023": "https://asahikawa-kagu.or.jp/",  // 旭川家具クラフト（北海道）
+  "am007": "https://www.hachikan.co.jp/",  // 八戸缶詰（青森）
+  "am010": "https://www.hatomasa.jp/",  // 鳩正宗（青森）
+  "am011": "https://rokkashuzo.com/",  // 六花酒造（青森）
+  "am014": "https://sakiori.jp/",  // 南部裂織保存会（青森）
+  "iw006": "https://www.ginga.or.jp/nanbu/",  // 岩手南部鉄器協同組合（岩手）
+  "iw007": "https://wankosoba.jp/",  // わんこそば老舗 東家（岩手）
+  "iw012": "http://www.washinoo.co.jp/",  // わしの尾（岩手）
+  "iw015": "https://nanbuhouki.jp/",  // 南部箒工房 高倉（岩手）
+  "iw020": "https://www.homespun.co.jp/",  // 花巻織物（岩手）
+  "mg006": "https://www.shiraken.co.jp/",  // 白謙蒲鉾店（宮城）
+  "mg012": "https://www.hagino-shuzou.co.jp/",  // 萩野酒造（宮城）
+  "ak003": "https://www.kurikyu.jp/",  // 栗久 (曲げわっぱ)（秋田）
+  "ak010": "https://www.yukinobosha.jp/",  // 齋彌酒造（秋田）
+  "ak011": "https://www.yamamoto-brewery.com/",  // 山本合名（秋田）
+  "ak012": "https://hinomaru-sake.com/",  // 日の丸醸造（秋田）
+  "yg003": "https://www.tatenokawa.com/",  // 楯の川酒造（山形）
+  "yg004": "https://www.mitobesake.com/",  // 水戸部酒造（山形）
+  "yg006": "https://o-ki.co.jp/",  // 米沢牛黄木（山形）
+  "yg015": "https://www.ginzanonsen.jp/yado/fujiya.html",  // おしんの宿 銀山温泉藤屋（山形）
+  "yg016": "https://www.takahata-winery.jp/",  // 高畠ワイナリー（山形）
+  "fk002": "https://www.shirokiyashikkiten.com/",  // 白木屋漆器店（福島）
+  "fk008": "http://www.ramenkai.com/",  // 喜多方ラーメン老麺会（福島）
+  "fk011": "http://www.ryuumon.co.jp/",  // 会津本郷焼 流紋焼（福島）
+  "fk018": "http://www.aizukiri.co.jp/",  // 会津桐タンス（福島）
+  "ib005": "https://kasamayaki.co.jp/",  // 笠間焼 向山窯（茨城）
+  "ib006": "https://www.kasamayaki.or.jp/",  // 笠間芸術の森協同組合（茨城）
+  "ib007": "http://www.darumanatto.jp/",  // 納豆 だるま食品（茨城）
+  "ib019": "http://www.kaminosato.com/",  // 常陸大宮和紙（茨城）
+  "tg007": "https://www.watanabesahei.co.jp/",  // 渡邊佐平商店（栃木）
+  "tg008": "https://www.gyozakai.com/",  // 宇都宮餃子協会連携（栃木）
+  "tg009": "https://nikko-pudding.jp/",  // 日光プリン亭（栃木）
+  "tg010": "https://www.tamarizuke.co.jp/",  // 今市味噌（栃木）
+  "tg012": "https://www.koisagoyaki.co.jp/",  // 小砂焼 藤田製陶所（栃木）
+  "gm003": "https://www.shimonita-natto.jp/",  // 下仁田納豆（群馬）
+  "gm004": "https://www.jazmf.co.jp/",  // 高崎ハム（群馬）
+  "gm007": "http://www.bunbuku.net/",  // 分福酒造（群馬）
+  "gm008": "http://www.ryujin.jp/",  // 龍神酒造（群馬）
+  "gm009": "https://akagisan.com/",  // 近藤酒造（群馬）
+  "gm010": "http://www.kiryuorimono.or.jp/",  // 桐生織物協同組合（群馬）
+  "gm012": "http://www.usuiseishi.co.jp/",  // 碓氷製糸（群馬）
+  "gm013": "https://www.tomioka-silkbrand.jp/",  // 富岡シルク（群馬）
+  "gm019": "https://www.yunokahonpo.com/",  // 草津温泉湯の花（群馬）
+  "st001": "https://monzouan.com/",  // 川越米菓 紋蔵庵（埼玉）
+  "st006": "https://www.seiun-sake.co.jp/",  // 晴雲酒造（埼玉）
+  "st009": "https://www.bukou.co.jp/",  // 武甲酒造（埼玉）
+  "st014": "https://sokasenbei.com/",  // 草加せんべい振興協議会（埼玉）
+  "st018": "https://www.kawaguchi-imono.jp/",  // 川口鋳物協同組合（埼玉）
+  "cb007": "https://www.chibashoyu.com/",  // ちば醤油（千葉）
+  "cb014": "https://allchoshi.com/",  // 銚子水産加工（千葉）
+  "cb015": "https://boso-olive.co.jp/",  // 南房総オリーブ（千葉）
+  "cb022": "http://sammu-sea-salt.com/",  // 九十九里塩（千葉）
+  "tk007": "https://www.sumidakawasuki.com/",  // 墨田革漉き工房（東京）
+  "tk011": "https://www.kanameya.co.jp/",  // 銀座かなめ屋（東京）
+  "tk020": "https://www.soutatsukamikawa.com/",  // 東京銀器 上川宗達（東京）
+  "tk022": "https://isogai-bekko.jp/",  // 江戸べっ甲 磯貝（東京）
+  "tk032": "https://www.ochiai-san.com/",  // 江戸更紗 二葉苑（東京）
+  "tk037": "https://www.senbei.co.jp/",  // 喜八堂（東京）
+  "tk040": "https://kototoidango.co.jp/",  // 言問団子（東京）
+  "tk066": "https://www.kibun.co.jp/",  // 築地紀文（東京）
+  "tk067": "https://edomatoi.jp/",  // 江戸べんとう仕出し（東京）
+  "tk071": "http://www.kisho-sake.jp/",  // 野崎酒造（東京）
+  "tk073": "https://www.tsubaki-abura.com/",  // 伊豆大島椿油 高田（東京）
+  "tk074": "http://www.edokimekomi.com/",  // 江戸木目込人形（東京）
+  "tk080": "https://www.ueda-silver.co.jp/",  // 江戸銀器 上田銀器（東京）
+  "kn002": "https://www.kamakurabori-kougeikan.jp/",  // 鎌倉彫 伝統工芸協同組合（神奈川）
+  "kn005": "https://edosei.co.jp/",  // 横浜中華街 江戸清（神奈川）
+  "kn013": "https://www.yoseki-museum.com/",  // 箱根寄木細工 本間木工所（神奈川）
+  "kn014": "https://ishikawa-shikki.com/",  // 小田原漆器 石川漆器（神奈川）
+  "ng008": "https://www.tadafusa.com/",  // 庖丁工房タダフサ（新潟）
+  "ng009": "https://salus.co.jp/",  // 佐藤金属興業 (SALUS)（新潟）
+  "ng021": "http://www.takachiyo.co.jp/",  // 高千代酒造（新潟）
+  "ng024": "https://www.ajicul.com/",  // 亀田製菓系列ベーカリー（新潟）
+  "ng031": "https://kamedajima.com/",  // 亀田縞織物（新潟）
+  "ng032": "http://niigatasikki.jp/",  // 新潟漆器（新潟）
+  "ng042": "https://niigatabeer.jp/",  // 新潟麦酒 (NIIGATA BEER)（新潟）
+  "ng043": "https://www.suwada.co.jp/",  // スワダ刃物（新潟）
+  "ty011": "https://www.kachikoma.com/",  // 勝駒酒造（富山）
+  "is009": "http://kirimoto.net/",  // 輪島塗 桐本（石川）
+  "is011": "http://www.maida-yuzen.com/",  // 加賀友禅 毎田染画工芸（石川）
+  "is017": "https://www.fukumitsuya.co.jp/",  // 加賀鳶 (福光屋)（石川）
+  "is024": "https://www.sionosato.com/",  // 能登塩工房（石川）
+  "is025": "https://kinzangama.com/",  // 九谷焼 錦山窯（石川）
+  "fi001": "https://tanakagannkyou.com/",  // 鯖江メガネ工房 田中眼鏡（福井）
+  "fi008": "https://sekisaka.co.jp/home.php",  // 越前漆器 関坂漆器（福井）
+  "fi014": "https://www.hanagaki.co.jp/",  // 南部酒造場（福井）
+  "ym001": "https://yja.or.jp/",  // 甲府ジュエリー協同組合（山梨）
+  "ym012": "https://www.kosaku.co.jp/",  // 小作 (ほうとう)（山梨）
+  "ym013": "https://fujiyoshida.yamanashi-tex.jp/",  // 郡内織物協同組合（山梨）
+  "ym014": "https://www.tenjin-factory.com/",  // テンジン (富士吉田織物)（山梨）
+  "nn014": "https://iiyama-butsudan.net/",  // 飯山仏壇（長野）
+  "nn015": "http://www.uchiyama-gami.jp/",  // 内山紙協同組合（長野）
+  "gf004": "https://www.maruasa.jp/",  // 丸朝製陶所（岐阜）
+  "gf005": "http://yamashi2951.com/",  // 美濃焼 山志製陶所（岐阜）
+  "gf010": "https://www.furukawashiko.com/",  // 美濃和紙 古川紙工（岐阜）
+  "gf013": "https://www.shibukusa.com/",  // 渋草柳造窯（岐阜）
+  "sz002": "https://oyaizu.co.jp/",  // 小柳津清一商店（静岡）
+  "sz005": "http://www.marukabu.co.jp/",  // 佐藤製茶 (御茶屋)（静岡）
+  "sz008": "https://nakanetea.jp/",  // 中根製茶（静岡）
+  "sz009": "https://www.ichikawaen.co.jp/",  // 市川園（静岡）
+  "sz010": "https://hagiricha.com/",  // 葉桐 (茶問屋)（静岡）
+  "sz024": "https://www.takesensuji.jp/",  // 駿河竹千筋細工（静岡）
+  "ai009": "https://www.pasconet.co.jp/",  // 敷島製パン (愛知)（愛知）
+  "ai018": "http://www.kintora.jp/",  // 金虎酒造（愛知）
+  "ai031": "https://singama.jp/",  // 瀬戸染付焼 加藤（愛知）
+  "me006": "https://www.tasaki.co.jp/",  // 伊勢志摩真珠 田崎工房（三重）
+  "me010": "https://yamaguchi-p.jp/",  // 萬古急須 山口陶器（三重）
+  "me011": "http://www.suzukazumi.co.jp/",  // 鈴鹿墨 進誠堂（三重）
+  "me020": "https://www.shinsabo.com/",  // 伊勢茶 かぶせ茶 深緑茶房（三重）
+  "sg003": "http://www.oogoya.co.jp/",  // 信楽焼 大小屋（滋賀）
+  "sg006": "https://www.sennaritei.co.jp/",  // 近江牛 千成亭（滋賀）
+  "ky003": "https://watabun.co.jp/",  // 西陣 渡文（京都）
+  "ky014": "https://www.kiyomizuyaki.or.jp/",  // 清水焼 京焼 陶磁器試作（京都）
+  "ky018": "http://www.adachikumihimokan.com/",  // 京組紐 安達（京都）
+  "ky020": "https://kawase-chozan.com/",  // 京人形 川瀬猪山（京都）
+  "ky044": "https://matsuishuzo.com/",  // 松井酒造（京都）
+  "ky049": "https://www.kyoto-uchida.ne.jp/",  // 打田漬物（京都）
+  "ky052": "http://www.to-fu.co.jp/",  // 湯豆腐 順正（京都）
+  "ky053": "https://www.sagatofu-morika.co.jp/",  // 老舗豆腐 嵯峨豆腐 森嘉（京都）
+  "ky057": "http://kyoto-iwai.co.jp/",  // 井和井 (京和雑貨)（京都）
+  "os004": "https://www.yamawaki-hamono.co.jp/",  // 堺打刃物 山脇刃物製作所（大阪）
+  "os006": "https://www.sakaihamono.or.jp/",  // 堺刃物協同組合（大阪）
+  "os007": "https://www.sennariya-coffee.jp/",  // 千成屋珈琲 (大阪の老舗)（大阪）
+  "os008": "https://fugetsu.jp/",  // 鶴橋風月（大阪）
+  "os009": "http://www.kiyasu.jp/",  // 赤福以外 喜八洲総本舗（大阪）
+  "os012": "https://kimchi.jp/",  // 高麗食品（大阪）
+  "os016": "https://kinoshitaranmaten.hp.peraichi.com/",  // 大阪欄間 木下欄間（大阪）
+  "os018": "http://www.osakasuzuki.co.jp/",  // 大阪錫器 すずや（大阪）
+  "os029": "https://www.chidoriya.co.jp/",  // 千鳥饅頭総本舗（大阪）
+  "os034": "https://www.amanosake.com/",  // 西條合資会社 (天野酒)（大阪）
+  "os038": "https://osaka-ranma.com/",  // 大阪欄間組合（大阪）
+  "hy009": "https://ohkumagama.com/",  // 丹波立杭焼 大熊窯（兵庫）
+  "hy012": "https://funamachi.jp/",  // 明石焼 ふなまち（兵庫）
+  "hy019": "https://www.odagaki.co.jp/",  // 丹波黒 黒大豆加工（兵庫）
+  "hy029": "https://www.banshuori.com/",  // 播州織 産元織元（兵庫）
+  "hy030": "https://kabura-tambanuno.com/",  // 丹波布 工房（兵庫）
+  "na003": "https://kinkoen.jp/",  // 奈良墨 錦光園（奈良）
+  "na005": "https://chasen.jp/",  // 高山茶筌 久保左文（奈良）
+  "na007": "https://akahadayaki.thebase.in/",  // 赤膚焼 大塩（奈良）
+  "na008": "https://www.hina-ningyou.com/",  // 奈良一刀彫（奈良）
+  "na010": "https://www.maruyama-seni.co.jp/",  // 奈良蚊帳 (麻織物)（奈良）
+  "na014": "https://miwa-takada.co.jp/",  // 三輪素麺マル勝（奈良）
+  "na019": "https://www.tukicha.com/",  // 奈良大和茶 月ヶ瀬（奈良）
+  "wk001": "https://www.ume-honpo.co.jp/",  // 南高梅 紀州梅干本舗（和歌山）
+  "wk005": "https://www.bincho.jp/",  // 紀州備長炭（和歌山）
+  "wk007": "https://yamaga-shikki.ocnk.net/",  // 紀州漆器 山家漆器店（和歌山）
+  "wk008": "https://www.koyasandaisido.jp/",  // 高野山金剛峯寺 御用達 香（和歌山）
+  "wk014": "https://kishushokuhin.co.jp/",  // 紀州蜜柑加工（和歌山）
+  "tt001": "http://torishoku.com/",  // 鳥取砂丘らっきょう（鳥取）
+  "tt006": "https://suwaizumi.jp/",  // 諏訪酒造 (鳥取)（鳥取）
+  "tt007": "https://www.daisenham.co.jp/",  // 鳥取大山ハム（鳥取）
+  "tt011": "https://nakaigama.jp/",  // 中井窯（鳥取）
+  "sh001": "https://sobahonda.com/",  // 出雲そば 本田商店（島根）
+  "sh003": "https://kokki.jp/",  // 国暉酒造（島根）
+  "sh005": "https://kan-nihonkai.com/",  // 日本海酒造 (環日本海)（島根）
+  "sh006": "https://okuizumosyuzou.com/",  // 奥出雲酒造（島根）
+  "sh007": "https://www.sakaneya.jp/",  // 出雲ぜんざい 坂根屋（島根）
+  "sh012": "https://izumomingeishi.com/",  // 出雲和紙工房（島根）
+  "ok004": "https://touyuukai.jp/",  // 備前焼陶友会（岡山）
+  "ok012": "https://tsurunotamago.jp/",  // つるの玉子（岡山）
+  "hi004": "https://www.kihitsu.jp/",  // 熊野筆 喜筆（広島）
+  "hi005": "https://www.kumanofude.or.jp/",  // 熊野筆協同組合（広島）
+  "hi016": "https://www.fukubijin.co.jp/",  // 福美人酒造（広島）
+  "yc012": "https://www.kawarasoba.jp/",  // 瓦そば たかせ（山口）
+  "ts005": "https://narutotai.jp/",  // 徳島すだち加工 松浦酒造（徳島）
+  "ts007": "https://www.nissin-shurui.co.jp/",  // 日新酒類（徳島）
+  "ts009": "https://housui.com/",  // 芳水酒造 (徳島)（徳島）
+  "ts012": "https://www.toku-den.com/",  // 徳島電子部品（徳島）
+  "kg001": "https://yamada-ya.com/",  // 讃岐うどん 山田家（香川）
+  "kg002": "http://www.kawafuku.co.jp/",  // 讃岐うどん 川福（香川）
+  "eh013": "https://keisho-farm.sakura.ne.jp/",  // 大三島 みかん加工（愛媛）
+  "eh014": "https://www.ikazaki.jp/",  // 五十崎和紙（愛媛）
+  "eh015": "https://tenjinsanshi.wixsite.com/uchiko",  // 内子手すき和紙（愛媛）
+  "kc001": "https://kamikoya-washi.com/",  // 土佐和紙 ロギール アウテンボーガルト（高知）
+  "kc008": "https://www.asahi-fresh.jp/",  // 高知ゆず ぽん酢 旭フレッシュ（高知）
+  "fo004": "https://magemono.com/",  // 博多曲物 柴田玉樹（福岡）
+  "fo018": "https://www.shibatatokushouten.com/",  // 博多曲物 柴田徳商店（福岡）
+  "fo024": "http://www.tanakachaho.com",  // 八女茶 田中茶舗（福岡）
+  "fo025": "https://fukuoka-ochakumiai.jimdofree.com/",  // 八女ふくおか茶協同組合（福岡）
+  "sa018": "https://soejimaen.thebase.in/",  // 嬉野茶 副島園（佐賀）
+  "sa020": "https://www.jf-sariake.or.jp/",  // 佐賀海苔 佐賀有明海漁協（佐賀）
+  "sa021": "https://imari-toujiki.or.jp/",  // 伊万里・有田焼伝統陶磁器組合（佐賀）
+  "nk005": "https://cf-nishiyama.jp/",  // 波佐見焼 西山窯（長崎）
+  "nk007": "https://www.kohsyo.co.jp/",  // 三川内焼 平戸洸祥団右ヱ門（長崎）
+  "nk010": "https://meijiyaham.jp/",  // 長崎ハム（長崎）
+  "nk012": "https://www.goto-udon.jp/",  // 五島手延うどん（長崎）
+  "oi004": "https://www.kotokotoya.com/",  // 由布院ジャム工房（大分）
+  "mz002": "http://kamioki.starfree.jp/",  // 日向夏加工 (上沖産業)（宮崎）
+  "mz006": "https://www.sakuranosato.co.jp/",  // 櫻の郷酒造（宮崎）
+  "kr010": "https://www.imoshochu.com/",  // 焼酎の祁答院蒸溜所（鹿児島）
+  "kr015": "https://oshimatsumugi.com/",  // 大島紬 工房（鹿児島）
+  "ow002": "https://www.chinenbingata.com/",  // 琉球紅型 知念紅型（沖縄）
+  "ow005": "https://okinawa-umikaze.com/",  // 琉球ガラス 海風ガラス（沖縄）
+  "ow011": "https://miyako-joufu.com/",  // 宮古上布 宮古織物（沖縄）
+  "ow016": "https://www.okinawa-kurozatou.or.jp/",  // 沖縄 黒糖加工（沖縄）
 };
 
 // 起動時にCOMPANIESへURLをマージ

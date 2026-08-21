@@ -7,3 +7,19 @@ _check.py
 node_modules/
 .vscode/
 .idea/
+curate.html
+_curate_check.js
+companies-keep-*.csv
+companies-deleted-*.csv
+deleted-ids-*.txt
+
+# 実在調査の結果は公開しない（PUBLICリポジトリ＋GitHub Pages のため）
+# 「該当する会社が見つからない」という判定を社名つきで外に出さない。
+# NONE には「サイトを持っていないだけの実在企業」が混ざり得る（2026-08-22 実測）。
+実在調査-*.tsv
+掲載判断リスト*.html
+掲載除外-*.txt
+*.bak-*
+
+# 個人のプロフィール書き出し（PUBLICリポジトリに入れない）
+LinkedIn_Profile_*.html
