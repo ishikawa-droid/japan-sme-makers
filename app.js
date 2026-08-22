@@ -276,8 +276,9 @@ function toggleFavorite(id) {
 //
 // 🔴 削除には性質の違う2種類がある（2026-08-22 追加）
 //
-//   ① data*.js の deleted:true … 実在調査にもとづく【掲載除外】。
-//      実在しない・廃業・企業でない・会社を特定できない、と判断したもの。
+//   ① data*.js の deleted:true … 掲載の対象外と判断したもの【掲載除外】。
+//      判断の理由は公開しない（リポジトリが公開設定のため、
+//      個別の会社についての評価を外に出さない）。理由は手元の調査記録に置いてある。
 //      export-csv.js もこれを見て CSV から外している（＝先方に渡す版と同じ状態）。
 //      画面のボタンで気軽に戻すものではないので、復元ボタンは出さない。
 //   ② LocalStorage の deletedIds … この端末での【一時的な非表示】。復元できる。
@@ -816,12 +817,12 @@ function openDeletedPanel() {
           </div>
           <div style="font-size:13px; color:#444; line-height:1.7;">
             ${state.lang === "ja"
-              ? `実在調査の結果、<b>実在が確認できない・廃業・企業ではない・会社を1社に特定できない</b>と
-                 判断したものです。書き出すCSVからも外れます（＝先方へ渡す版と同じ状態）。<br>
+              ? `調査のうえで掲載の対象外と判断したものです。書き出すCSVからも外れます
+                 （＝先方へ渡す版と同じ状態）。判断の理由は手元の調査記録に残してあります。<br>
                  <b>この画面からは戻せません。</b>戻すには <code>data*.js</code> の
                  <code>deleted:true</code> を外してください。`
-              : `Excluded after verification (not found / closed / not a company / cannot identify a single company).
-                 Also excluded from the exported CSV. Restore by removing <code>deleted:true</code> in <code>data*.js</code>.`}
+              : `Excluded from the directory after review. Also excluded from the exported CSV.
+                 Restore by removing <code>deleted:true</code> in <code>data*.js</code>.`}
           </div>
         </div>
       ` : ""}
