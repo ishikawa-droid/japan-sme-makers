@@ -19,7 +19,9 @@ deleted-ids-*.txt
 実在調査-*.tsv
 掲載判断リスト*.html
 掲載除外-*.txt
-*.bak-*
+掲載判断-*.txt
+掲載を止めた*.html
+*.bak*
 
 # 個人のプロフィール書き出し（PUBLICリポジトリに入れない）
 LinkedIn_Profile_*.html

@@ -33,11 +33,11 @@ COMPANIES.push(
   {i:"cos_os05",ja:"大阪化粧品工業",en:"Osaka Cosmetics Industry",pref:"osaka",cat:"cosmetics",desc_ja:"中小化粧品OEM受託",desc_en:"SME cosmetics OEM",deleted:true},
   {i:"cos_os06",ja:"中央化学コスメOEM",en:"Chuo Chemical Cosme OEM",pref:"osaka",cat:"cosmetics",desc_ja:"スキンケア処方開発・OEM",desc_en:"Skincare formulation & OEM",deleted:true},
   {i:"cos_os07",ja:"アスカコーポレーション",en:"Asuka Corporation",pref:"osaka",cat:"cosmetics",desc_ja:"オーガニック化粧品OEM",desc_en:"Organic cosmetics OEM",verified:true,deleted:true},
-  {i:"cos_os08",ja:"ナチュラルガーデン (関西)",en:"Natural Garden Kansai",pref:"osaka",cat:"cosmetics",desc_ja:"無添加化粧品の中小ブランド",desc_en:"Additive-free cosmetics brand"},
+  {i:"cos_os08",ja:"ナチュラルガーデン (関西)",en:"Natural Garden Kansai",pref:"osaka",cat:"cosmetics",desc_ja:"無添加化粧品の中小ブランド",desc_en:"Additive-free cosmetics brand",deleted:true},
   {i:"cos_os09",ja:"関西コスメティクスラボ",en:"Kansai Cosmetics Lab",pref:"osaka",cat:"cosmetics",desc_ja:"処方開発・小ロットOEM",desc_en:"Small-lot formulation OEM",deleted:true},
 
   // ===== 京都（伝統素材コスメ） =====
-  {i:"cos_ky01",ja:"京都美研",en:"Kyoto Biken",pref:"kyoto",cat:"cosmetics",desc_ja:"京の伝統素材コスメ研究",desc_en:"Kyoto heritage-ingredient cosmetics R&D"},
+  {i:"cos_ky01",ja:"株式会社京都美粧研",en:"Kyoto Biken",pref:"kyoto",cat:"cosmetics",desc_ja:"京の伝統素材コスメ研究",desc_en:"Kyoto heritage-ingredient cosmetics R&D"},
   {i:"cos_ky02",ja:"京コスメ オーガニック工房",en:"Kyo-Cosme Organic Atelier",pref:"kyoto",cat:"cosmetics",desc_ja:"宇治抹茶・桜葉エキスのコスメ",desc_en:"Uji matcha & cherry-leaf cosmetics",deleted:true},
   {i:"cos_ky03",ja:"紫紺野 (しこんの)",en:"Shikonno",pref:"kyoto",cat:"cosmetics",desc_ja:"紫根エキスの京都発コスメ",desc_en:"Kyoto shikon-root cosmetics",deleted:true},
   {i:"cos_ky04",ja:"京和コスメ研究所",en:"Kyo-wa Cosme Lab",pref:"kyoto",cat:"cosmetics",desc_ja:"和素材スキンケアの中小ラボ",desc_en:"Wa-ingredient skincare lab",deleted:true},
@@ -53,7 +53,7 @@ COMPANIES.push(
   {i:"cos_iw01",ja:"岩手バイオコスメ研究所",en:"Iwate Bio Cosme Lab",pref:"iwate",cat:"cosmetics",desc_ja:"県産植物のスキンケア研究",desc_en:"Iwate botanical skincare research",deleted:true},
   {i:"cos_mg01",ja:"仙台コスメティクスラボ",en:"Sendai Cosmetics Lab",pref:"miyagi",cat:"cosmetics",desc_ja:"仙台の化粧品OEM",desc_en:"Sendai cosmetics OEM",deleted:true},
   {i:"cos_ib01",ja:"つくばコスメ研究所",en:"Tsukuba Cosme Lab",pref:"ibaraki",cat:"cosmetics",desc_ja:"つくば研究学園の化粧品開発",desc_en:"Tsukuba research-area cosmetics R&D",deleted:true},
-  {i:"cos_gm01",ja:"草津温泉化粧品",en:"Kusatsu Onsen Cosmetics",pref:"gunma",cat:"cosmetics",desc_ja:"草津温泉素材コスメ",desc_en:"Kusatsu onsen-source cosmetics"},
+  {i:"cos_gm01",ja:"株式会社草津温泉浴剤製造所",en:"Kusatsu Onsen Cosmetics",pref:"gunma",cat:"cosmetics",desc_ja:"草津温泉素材コスメ",desc_en:"Kusatsu onsen-source cosmetics"},
   {i:"cos_sz01",ja:"駿河コスメ",en:"Suruga Cosme",pref:"shizuoka",cat:"cosmetics",desc_ja:"静岡茶葉由来のコスメ",desc_en:"Shizuoka tea-leaf cosmetics",deleted:true},
   {i:"cos_sz02",ja:"伊豆コスメティクス",en:"Izu Cosmetics",pref:"shizuoka",cat:"cosmetics",desc_ja:"伊豆温泉水コスメ",desc_en:"Izu onsen-water cosmetics",deleted:true},
   {i:"cos_fo01",ja:"博多コスメ研究所",en:"Hakata Cosmetic Lab",pref:"fukuoka",cat:"cosmetics",desc_ja:"博多の化粧品OEM",desc_en:"Hakata cosmetics OEM",deleted:true},
@@ -62,5 +62,5 @@ COMPANIES.push(
   {i:"cos_wk01",ja:"紀州梅コスメ工房",en:"Kishu Ume Cosme",pref:"wakayama",cat:"cosmetics",desc_ja:"南高梅由来のスキンケア",desc_en:"Nanko-plum skincare maker",deleted:true},
   {i:"cos_wk02",ja:"高野山植物コスメ",en:"Koyasan Botanical Cosme",pref:"wakayama",cat:"cosmetics",desc_ja:"高野山ハーブのコスメ",desc_en:"Koyasan herbal cosmetics",deleted:true},
   {i:"cos_oi01",ja:"湯布院ハーブコスメ",en:"Yufuin Herbal Cosme",pref:"oita",cat:"cosmetics",desc_ja:"湯布院のハーブ化粧品",desc_en:"Yufuin herbal cosmetics",deleted:true},
-  {i:"cos_km01",ja:"阿蘇火山水コスメ",en:"Aso Mineral Water Cosme",pref:"kumamoto",cat:"cosmetics",desc_ja:"阿蘇のミネラル水コスメ",desc_en:"Aso mineral-water cosmetics"},
+  {i:"cos_km01",ja:"南阿蘇オーガニック",en:"Aso Mineral Water Cosme",pref:"kumamoto",cat:"cosmetics",desc_ja:"阿蘇のミネラル水コスメ",desc_en:"Aso mineral-water cosmetics"},
 );
