@@ -273,11 +273,26 @@ function toggleFavorite(id) {
 }
 
 // ===== 全企業（組み込み + ユーザー追加 - 削除済み） =====
+//
+// 🔴 削除には性質の違う2種類がある（2026-08-22 追加）
+//
+//   ① data*.js の deleted:true … 実在調査にもとづく【掲載除外】。
+//      実在しない・廃業・企業でない・会社を特定できない、と判断したもの。
+//      export-csv.js もこれを見て CSV から外している（＝先方に渡す版と同じ状態）。
+//      画面のボタンで気軽に戻すものではないので、復元ボタンは出さない。
+//   ② LocalStorage の deletedIds … この端末での【一時的な非表示】。復元できる。
+//
+// この関数が ① を見ていなかったため、CSVは757社なのに画面は1,179社という
+// 食い違いが起きていた。「どっちが本当か」が分からなくなるのが実害だった。
 function allCompaniesRaw() {
   return COMPANIES.concat(state.userCompanies);
 }
+/** ① 掲載除外（データ側で確定したもの） */
+function isExcluded(c) {
+  return !!c.deleted;
+}
 function allCompanies() {
-  return allCompaniesRaw().filter(c => !state.deletedIds.has(c.i));
+  return allCompaniesRaw().filter(c => !isExcluded(c) && !state.deletedIds.has(c.i));
 }
 
 // ===== フィルタリング =====
@@ -746,18 +761,24 @@ function render(preservePosition = false) {
 function updateDeletedBtn() {
   const btn = document.getElementById("deleted-btn");
   if (!btn) return;
-  const count = state.deletedIds.size;
+  // 🔴 一時的な非表示が0件でも、掲載除外があればボタンを出す。
+  //    出さないとパネルを開けず、「何が除外されているか」を確かめる手段が無くなる。
+  const hidden   = state.deletedIds.size;
+  const excluded = allCompaniesRaw().filter(isExcluded).length;
+  const count    = hidden + excluded;
   if (count === 0) {
     btn.classList.add("hidden");
   } else {
     btn.classList.remove("hidden");
-    btn.textContent = state.lang === "ja" ? `🗑 削除済み (${count})` : `🗑 Deleted (${count})`;
+    btn.textContent = state.lang === "ja" ? `🗑 除外 (${count})` : `🗑 Excluded (${count})`;
   }
 }
 
 function openDeletedPanel() {
   const dict = I18N[state.lang];
-  const deleted = allCompaniesRaw().filter(c => state.deletedIds.has(c.i));
+  const deleted  = allCompaniesRaw().filter(c => state.deletedIds.has(c.i));
+  // ① 掲載除外（データ側で確定）。件数だけ見せて、復元ボタンは出さない
+  const excluded = allCompaniesRaw().filter(isExcluded);
 
   el.modalBody.innerHTML = `
     <div class="modal-inner">
@@ -782,6 +803,26 @@ function openDeletedPanel() {
       ${deleted.length > 0 ? `
         <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); text-align: center;">
           <button class="btn-secondary" id="restore-all-btn">${state.lang === "ja" ? "すべて復元" : "Restore all"}</button>
+        </div>
+      ` : ""}
+
+      ${excluded.length > 0 ? `
+        <div style="margin-top:24px; padding:14px 16px; border-left:5px solid #b91c1c;
+                    background:#fef2f2; border-radius:0 5px 5px 0;">
+          <div style="font-weight:700; color:#b91c1c; margin-bottom:6px;">
+            ${state.lang === "ja"
+              ? `掲載除外 ${excluded.length} 社（データ側で確定）`
+              : `${excluded.length} companies excluded from the directory`}
+          </div>
+          <div style="font-size:13px; color:#444; line-height:1.7;">
+            ${state.lang === "ja"
+              ? `実在調査の結果、<b>実在が確認できない・廃業・企業ではない・会社を1社に特定できない</b>と
+                 判断したものです。書き出すCSVからも外れます（＝先方へ渡す版と同じ状態）。<br>
+                 <b>この画面からは戻せません。</b>戻すには <code>data*.js</code> の
+                 <code>deleted:true</code> を外してください。`
+              : `Excluded after verification (not found / closed / not a company / cannot identify a single company).
+                 Also excluded from the exported CSV. Restore by removing <code>deleted:true</code> in <code>data*.js</code>.`}
+          </div>
         </div>
       ` : ""}
     </div>
