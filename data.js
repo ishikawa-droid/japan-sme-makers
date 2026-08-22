@@ -570,7 +570,7 @@ const COMPANIES = [
   {i:"kn008",ja:"小田原蒲鉾 鈴廣",en:"Suzuhiro Kamaboko",pref:"kanagawa",cat:"food",desc_ja:"小田原蒲鉾の老舗",desc_en:"Heritage Odawara kamaboko",verified:true},
   {i:"kn009",ja:"籠淸 蒲鉾",en:"Kagosei Kamaboko",pref:"kanagawa",cat:"food",desc_ja:"小田原の老舗蒲鉾",desc_en:"Odawara heritage kamaboko",verified:true},
   {i:"kn010",ja:"丸う田代",en:"Maruu Tashiro",pref:"kanagawa",cat:"food",desc_ja:"小田原の蒲鉾老舗",desc_en:"Odawara heritage kamaboko",deleted:true},
-  {i:"kn011",ja:"井上蒲鉾店",en:"Inoue Kamaboko",pref:"kanagawa",cat:"food",desc_ja:"小田原の蒲鉾",desc_en:"Odawara kamaboko"},
+  {i:"kn011",ja:"井上蒲鉾店",en:"Inoue Kamaboko",pref:"kanagawa",cat:"food",desc_ja:"大磯の蒲鉾（鎌倉に支店）",desc_en:"Oiso kamaboko maker"},
   {i:"kn012",ja:"箱根寄木細工 露木木工所",en:"Tsuyuki Yosegi",pref:"kanagawa",cat:"wood",desc_ja:"箱根寄木細工の伝統工房",desc_en:"Hakone yosegi marquetry atelier",verified:true},
   {i:"kn013",ja:"箱根寄木細工 本間木工所",en:"Honma Yosegi",pref:"kanagawa",cat:"wood",desc_ja:"箱根寄木細工の老舗",desc_en:"Heritage Hakone yosegi"},
   {i:"kn014",ja:"小田原漆器 石川漆器",en:"Ishikawa Odawara Lacquer",pref:"kanagawa",cat:"craft",desc_ja:"小田原漆器の伝統工房",desc_en:"Odawara lacquer atelier"},
@@ -588,7 +588,7 @@ const COMPANIES = [
   {i:"kn026",ja:"鎌倉宮乃醸 (酒蔵)",en:"Kamakura Brewery",pref:"kanagawa",cat:"sake",desc_ja:"鎌倉の地酒",desc_en:"Kamakura local sake",deleted:true},
   {i:"kn027",ja:"瀬戸酒造店",en:"Seto Sake Brewery",pref:"kanagawa",cat:"sake",desc_ja:"開成町の地酒蔵",desc_en:"Kaisei-machi local sake",verified:true},
   {i:"kn028",ja:"川西屋酒造店",en:"Kawanishiya Brewery",pref:"kanagawa",cat:"sake",desc_ja:"足柄の老舗酒蔵",desc_en:"Ashigara heritage brewer",verified:true},
-  {i:"kn029",ja:"井上酒造",en:"Inoue Brewery",pref:"kanagawa",cat:"sake",desc_ja:"小田原の地酒蔵",desc_en:"Odawara local brewer"},
+  {i:"kn029",ja:"井上酒造",en:"Inoue Brewery",pref:"kanagawa",cat:"sake",desc_ja:"大井町の地酒蔵（1789年創業）",desc_en:"Oimachi sake brewery, founded 1789"},
   {i:"kn030",ja:"川崎ハム工房",en:"Kawasaki Ham Atelier",pref:"kanagawa",cat:"food",desc_ja:"国産豚のハム・ソーセージ",desc_en:"Domestic pork ham & sausage",deleted:true},
 ];
 // 中部以降は data2.js に分割（読み込み順: data.js → data2.js → ogp.js → app.js）

@@ -53,7 +53,7 @@ COMPANIES.push(
   {i:"cos_iw01",ja:"岩手バイオコスメ研究所",en:"Iwate Bio Cosme Lab",pref:"iwate",cat:"cosmetics",desc_ja:"県産植物のスキンケア研究",desc_en:"Iwate botanical skincare research",deleted:true},
   {i:"cos_mg01",ja:"仙台コスメティクスラボ",en:"Sendai Cosmetics Lab",pref:"miyagi",cat:"cosmetics",desc_ja:"仙台の化粧品OEM",desc_en:"Sendai cosmetics OEM",deleted:true},
   {i:"cos_ib01",ja:"つくばコスメ研究所",en:"Tsukuba Cosme Lab",pref:"ibaraki",cat:"cosmetics",desc_ja:"つくば研究学園の化粧品開発",desc_en:"Tsukuba research-area cosmetics R&D",deleted:true},
-  {i:"cos_gm01",ja:"株式会社草津温泉浴剤製造所",en:"Kusatsu Onsen Cosmetics",pref:"gunma",cat:"cosmetics",desc_ja:"草津温泉素材コスメ",desc_en:"Kusatsu onsen-source cosmetics"},
+  {i:"cos_gm01",ja:"株式会社草津温泉浴剤製造所",en:"Kusatsu Onsen Cosmetics",pref:"gunma",cat:"cosmetics",desc_ja:"草津温泉の湯の花を使った入浴剤の製造",desc_en:"Kusatsu onsen bath-salt manufacturer"},
   {i:"cos_sz01",ja:"駿河コスメ",en:"Suruga Cosme",pref:"shizuoka",cat:"cosmetics",desc_ja:"静岡茶葉由来のコスメ",desc_en:"Shizuoka tea-leaf cosmetics",deleted:true},
   {i:"cos_sz02",ja:"伊豆コスメティクス",en:"Izu Cosmetics",pref:"shizuoka",cat:"cosmetics",desc_ja:"伊豆温泉水コスメ",desc_en:"Izu onsen-water cosmetics",deleted:true},
   {i:"cos_fo01",ja:"博多コスメ研究所",en:"Hakata Cosmetic Lab",pref:"fukuoka",cat:"cosmetics",desc_ja:"博多の化粧品OEM",desc_en:"Hakata cosmetics OEM",deleted:true},

@@ -46,7 +46,7 @@ COMPANIES.push(
   {i:"ng043",ja:"スワダ刃物",en:"Suwada Blade Co.",pref:"niigata",cat:"cutlery",desc_ja:"三条の精密刃物",desc_en:"Sanjo precision blades"},
   {i:"ng044",ja:"津南醸造",en:"Tsunan Brewery",pref:"niigata",cat:"sake",desc_ja:"津南の地酒蔵",desc_en:"Tsunan local sake brewer",verified:true},
   {i:"ng045",ja:"市島酒造",en:"Ichishima Brewery",pref:"niigata",cat:"sake",desc_ja:"新発田の老舗酒蔵",desc_en:"Shibata heritage sake brewer",verified:true},
-  {i:"ng046",ja:"北前そば高田屋",en:"Takadaya Hegisoba",pref:"niigata",cat:"food",desc_ja:"魚沼のへぎそば",desc_en:"Uonuma heg-isoba"},
+  {i:"ng046",ja:"北前そば高田屋",en:"Takadaya Hegisoba",pref:"niigata",cat:"food",desc_ja:"魚沼のへぎそば",desc_en:"Uonuma heg-isoba",deleted:true},
   {i:"ng047",ja:"越後製菓",en:"Echigo Seika",pref:"niigata",cat:"food",desc_ja:"長岡の餅・米菓",desc_en:"Nagaoka mochi & rice crackers",verified:true},
   {i:"ng048",ja:"佐渡金箔工房",en:"Sado Gold Leaf",pref:"niigata",cat:"craft",desc_ja:"佐渡の金箔工芸",desc_en:"Sado gold leaf craft",deleted:true},
   {i:"ng049",ja:"新潟漆器組合",en:"Niigata Lacquer Coop",pref:"niigata",cat:"craft",desc_ja:"県内漆器組合",desc_en:"Niigata lacquer cooperative"},

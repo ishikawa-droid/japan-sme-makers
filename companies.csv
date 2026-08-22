@@ -216,13 +216,13 @@ kn005,横浜中華街 江戸清,Edosei Chuka-gai,神奈川,関東,食品・調�
 kn006,崎陽軒,Kiyoken,神奈川,関東,食品・調味料,横浜シウマイの老舗,Yokohama heritage shumai,https://kiyoken.com/,,,確認済み
 kn008,小田原蒲鉾 鈴廣,Suzuhiro Kamaboko,神奈川,関東,食品・調味料,小田原蒲鉾の老舗,Heritage Odawara kamaboko,https://www.kamaboko.com/,,,確認済み
 kn009,籠淸 蒲鉾,Kagosei Kamaboko,神奈川,関東,食品・調味料,小田原の老舗蒲鉾,Odawara heritage kamaboko,https://www.kagosei.co.jp/,,,確認済み
-kn011,井上蒲鉾店,Inoue Kamaboko,神奈川,関東,食品・調味料,小田原の蒲鉾,Odawara kamaboko,,,,
+kn011,井上蒲鉾店,Inoue Kamaboko,神奈川,関東,食品・調味料,大磯の蒲鉾（鎌倉に支店）,Oiso kamaboko maker,,,,
 kn012,箱根寄木細工 露木木工所,Tsuyuki Yosegi,神奈川,関東,木工・家具,箱根寄木細工の伝統工房,Hakone yosegi marquetry atelier,https://www.yoseki.com/,,,確認済み
 kn013,箱根寄木細工 本間木工所,Honma Yosegi,神奈川,関東,木工・家具,箱根寄木細工の老舗,Heritage Hakone yosegi,https://www.yoseki-museum.com/,,,
 kn014,小田原漆器 石川漆器,Ishikawa Odawara Lacquer,神奈川,関東,伝統工芸,小田原漆器の伝統工房,Odawara lacquer atelier,https://ishikawa-shikki.com/,,,
 kn027,瀬戸酒造店,Seto Sake Brewery,神奈川,関東,酒造,開成町の地酒蔵,Kaisei-machi local sake,https://setosyuzou.com/,,,確認済み
 kn028,川西屋酒造店,Kawanishiya Brewery,神奈川,関東,酒造,足柄の老舗酒蔵,Ashigara heritage brewer,https://www.kawanishiya.com/,,,確認済み
-kn029,井上酒造,Inoue Brewery,神奈川,関東,酒造,小田原の地酒蔵,Odawara local brewer,,,,
+kn029,井上酒造,Inoue Brewery,神奈川,関東,酒造,大井町の地酒蔵（1789年創業）,"Oimachi sake brewery, founded 1789",,,,
 ng001,玉川堂,Gyokusendo,新潟,中部,刃物・金物,燕の鎚起銅器・200年の老舗,200-year tsuiki copperware atelier (Tsubame),https://www.gyokusendo.com/,,,確認済み
 ng003,藤次郎 (TOJIRO),Tojiro,新潟,中部,刃物・金物,燕三条の包丁メーカー,Tsubame-Sanjo kitchen knives,https://tojiro.net/,,,確認済み
 ng004,タダフサ,Tadafusa,新潟,中部,刃物・金物,三条の包丁メーカー,Sanjo knife maker,https://www.tadafusa.com/,,,確認済み
@@ -251,7 +251,6 @@ ng042,新潟麦酒 (NIIGATA BEER),Niigata Beer,新潟,中部,酒造,新潟のク
 ng043,スワダ刃物,Suwada Blade Co.,新潟,中部,刃物・金物,三条の精密刃物,Sanjo precision blades,https://www.suwada.co.jp/,,,
 ng044,津南醸造,Tsunan Brewery,新潟,中部,酒造,津南の地酒蔵,Tsunan local sake brewer,https://tsunan-sake.com/,,,確認済み
 ng045,市島酒造,Ichishima Brewery,新潟,中部,酒造,新発田の老舗酒蔵,Shibata heritage sake brewer,https://www.ichishima.jp/,,,確認済み
-ng046,北前そば高田屋,Takadaya Hegisoba,新潟,中部,食品・調味料,魚沼のへぎそば,Uonuma heg-isoba,,,,
 ng047,越後製菓,Echigo Seika,新潟,中部,食品・調味料,長岡の餅・米菓,Nagaoka mochi & rice crackers,https://www.echigoseika.co.jp/,,,確認済み
 ng049,新潟漆器組合,Niigata Lacquer Coop,新潟,中部,伝統工芸,県内漆器組合,Niigata lacquer cooperative,,,,
 ty001,高岡銅器 老子製作所,Oigo Seisakusho,富山,中部,伝統工芸,高岡銅器の梵鐘・鋳物,Takaoka bronze bell foundry,https://www.oigo.jp/,,,確認済み
@@ -476,7 +475,7 @@ os006,堺刃物協同組合,Sakai Cutlery Coop,大阪,関西,刃物・金物,堺
 os007,千成屋珈琲 (大阪の老舗),Sennariya Coffee,大阪,関西,食品・調味料,新世界の老舗珈琲,Shinsekai heritage coffee,https://www.sennariya-coffee.jp/,,,
 os008,鶴橋風月,Tsuruhashi Fugetsu,大阪,関西,食品・調味料,鶴橋お好み焼老舗,Tsuruhashi okonomiyaki heritage,https://fugetsu.jp/,,,
 os009,赤福以外 喜八洲総本舗,Kiyasu Sohonpo,大阪,関西,食品・調味料,大阪のみたらし団子老舗,Osaka heritage mitarashi,http://www.kiyasu.jp/,,,確認済み
-os010,千鳥屋宗家,Chidoriya Soke,兵庫,関西,食品・調味料,大阪老舗和菓子,Heritage Osaka wagashi,,,,確認済み
+os010,千鳥屋宗家,Chidoriya Soke,兵庫,関西,食品・調味料,和菓子の老舗（本社は西宮・本店は大阪中央区）,"Heritage wagashi maker, HQ in Nishinomiya",,,,確認済み
 os012,高麗食品,Korai Foods,大阪,関西,食品・調味料,鶴橋のキムチ老舗,Tsuruhashi kimchi heritage,https://kimchi.jp/,,,
 os013,ハクション大魔王 食品 (鴻商店),Otori Shoten Foods,大阪,関西,食品・調味料,大阪の食品OEM,Osaka food OEM,,,,
 os016,大阪欄間 木下欄間,Kinoshita Ranma,大阪,関西,木工・家具,大阪欄間の伝統工芸,Osaka ranma transom craft,https://kinoshitaranmaten.hp.peraichi.com/,,,
@@ -546,7 +545,7 @@ tt001,鳥取砂丘らっきょう,Tottori Dune Rakkyo,鳥取,中国,食品・調
 tt005,千代むすび酒造,Chiyo Musubi,鳥取,中国,酒造,境港の地酒蔵,Sakaiminato local sake,https://chiyomusubi.co.jp/,,,確認済み
 tt006,諏訪酒造 (鳥取),Suwa Sake Tottori,鳥取,中国,酒造,鳥取の地酒蔵,Tottori local sake brewer,https://suwaizumi.jp/,,,
 tt007,鳥取大山ハム,Daisen Ham,鳥取,中国,食品・調味料,大山の老舗ハム,Heritage Daisen ham,https://www.daisenham.co.jp/,,,確認済み
-tt010,石谷精華堂,Utsubuki Dango,鳥取,中国,食品・調味料,倉吉の老舗団子,Kurayoshi heritage dango,,,,
+tt010,石谷精華堂,Utsubuki Dango,鳥取,中国,食品・調味料,倉吉の老舗和菓子（銘菓「打吹公園だんご」の製造元）,Kurayoshi wagashi maker of Utsubuki-koen dango,,,,
 tt011,中井窯,Nakai Kiln,鳥取,中国,硝子・陶磁器,牛ノ戸焼の窯元,Ushinoto-yaki kiln,https://nakaigama.jp/,,,
 sh001,出雲そば 本田商店,Honda Izumo Soba,島根,中国,食品・調味料,出雲そばの老舗,Heritage Izumo soba maker,https://sobahonda.com/,,,
 sh002,羽根屋出雲そば,Haneya Izumo Soba,島根,中国,食品・調味料,出雲そばの老舗,Heritage Izumo soba,https://www.haneyasoba.co.jp/,,,確認済み
@@ -564,7 +563,7 @@ ok006,児島ジーンズ 桃太郎ジーンズ,Momotaro Jeans,岡山,中国,ア�
 ok007,児島 ジャパンブルー,Japan Blue Jeans,岡山,中国,アパレル・繊維,児島デニムブランド,Kojima denim brand,https://www.japanblue-jeans.com/,,,確認済み
 ok008,児島 ビッグジョン,Big John Kojima,岡山,中国,アパレル・繊維,児島の老舗デニム,Heritage Kojima denim,https://www.bigjohn.co.jp/,,,確認済み
 ok009,児島 EVISU JEANS,Evisu Jeans Kojima,岡山,中国,アパレル・繊維,児島の世界的デニム,World-famous Kojima denim,https://www.evisu.com/,,,確認済み
-ok010,大江洋服店（OOE YOFUKUTEN）,OOE Yofukuten,岡山,中国,アパレル・繊維,児島デニムの職人ブランド,Kojima artisan denim brand,,,,
+ok010,大江洋服店（OOE YOFUKUTEN）,OOE Yofukuten,愛知,中部,アパレル・繊維,一宮の職人が縫うジーンズ（生地は岡山・児島産）,Ichinomiya-sewn jeans using Kojima denim,,,,
 ok011,きびだんご 廣榮堂,Koeido Kibidango,岡山,中国,食品・調味料,岡山きびだんごの老舗,Heritage Okayama kibidango,https://www.koeido.co.jp/,,,確認済み
 ok012,つるの玉子,Tsuru no Tamago,岡山,中国,食品・調味料,岡山銘菓鶴の玉子,Okayama heritage tsuru no tamago,https://tsurunotamago.jp/,,,
 ok014,宮下酒造,Miyashita Brewery,岡山,中国,酒造,岡山の地酒・地ビール蔵,Okayama craft beer & sake brewer,https://www.msb.co.jp/,,,確認済み
@@ -595,7 +594,7 @@ yc005,獺祭 (旭酒造),Asahi Shuzo (Dassai),山口,中国,酒造,岩国の獺�
 yc006,雁木 (八百新酒造),Yaoshin Brewery (Gangi),山口,中国,酒造,岩国の地酒、雁木,Iwakuni brewer of Gangi,https://yaoshin.co.jp/,,,確認済み
 yc007,五橋 (酒井酒造),Sakai Brewery (Gokyo),山口,中国,酒造,岩国の老舗酒蔵,Iwakuni heritage sake brewer,https://gokyo-sake.co.jp/,,,確認済み
 yc009,林兼産業株式会社,Hayashikane Fugu,山口,中国,食品・調味料,下関のふぐ加工,Shimonoseki fugu processor,,,,
-yc011,北九州ニッスイ 宇部工場,Ube Kamaboko,山口,中国,食品・調味料,宇部の老舗かまぼこ,Heritage Ube kamaboko,,,,
+yc011,北九州ニッスイ 宇部工場,Ube Kamaboko,山口,中国,食品・調味料,宇部工場でつくるかまぼこ（運営は北九州ニッスイ・本社は福岡）,"Ube-plant kamaboko, operated by Kitakyushu Nissui",,,,
 yc012,瓦そば たかせ,Takase Kawara Soba,山口,中国,食品・調味料,下関瓦そば老舗,Heritage Shimonoseki kawara soba,https://www.kawarasoba.jp/,,,
 ts001,阿波藍染 古庄染工所,Furusho Awa Indigo,徳島,四国,アパレル・繊維,阿波藍染の老舗,Heritage Awa indigo dye,https://furushou.jp/,,,確認済み
 ts002,阿波藍染 BUAISOU,BUAISOU Indigo,徳島,四国,アパレル・繊維,阿波藍染の若手職人ブランド,Young Awa indigo artisan brand,https://www.buaisou-i.com/,,,確認済み
@@ -664,7 +663,6 @@ fo023,株式会社福寿園,Yame Fukujuen,京都,関西,お茶,八女抹茶の�
 fo024,八女茶 田中茶舗,Tanaka Chaho Yame,福岡,九州,お茶,八女茶の老舗茶舗,Heritage Yame tea house,http://www.tanakachaho.com,,,
 fo025,八女ふくおか茶協同組合,Fukuoka Yame Tea Coop,福岡,九州,お茶,八女茶組合,Yame tea cooperative,https://fukuoka-ochakumiai.jimdofree.com/,,,
 fo026,博多曲物 十八代柴田玉樹,Hakata Magemono Tamaki,福岡,九州,木工・家具,博多曲物の若手,Young Hakata magemono,,,,
-fo029,博多金物株式会社,Hakata Iron Pan,福岡,九州,刃物・金物,博多の鉄鍋メーカー,Hakata iron pan maker,,,,
 sa001,有田焼 香蘭社,Koransha Aritayaki,佐賀,九州,硝子・陶磁器,有田焼の老舗,Heritage Arita porcelain,https://www.koransha.co.jp/,,,確認済み
 sa002,有田焼 深川製磁,Fukagawa Seiji,佐賀,九州,硝子・陶磁器,有田焼の宮内庁御用達,"Arita, Imperial Household supplier",https://www.fukagawa-seiji.co.jp/,,,確認済み
 sa003,有田焼 源右衛門窯,Gen-emon Kiln,佐賀,九州,硝子・陶磁器,有田焼の老舗窯元,Heritage Arita kiln,https://www.gen-emon.co.jp/,,,確認済み
@@ -756,5 +754,5 @@ cos_tk21,アユーラ・ラボラトリーズ,Ayura Laboratories,東京,関東,�
 cos_ky01,株式会社京都美粧研,Kyoto Biken,京都,関西,化粧品,京の伝統素材コスメ研究,Kyoto heritage-ingredient cosmetics R&D,,,,
 cos_kn01,アジュバンコスメジャパン,Adjuvant Cosme Japan,兵庫,関西,化粧品,神戸発サロン専売ブランド,Kobe salon-exclusive cosmetics,https://www.adjuvant.co.jp/,,,確認済み
 cos_ym01,ARSOA (アルソア慧央グループ),ARSOA,山梨,中部,化粧品,八ヶ岳の自然派石鹸・化粧品,Yatsugatake natural soap & cosmetics,https://www.arsoa.co.jp/,,,確認済み
-cos_gm01,株式会社草津温泉浴剤製造所,Kusatsu Onsen Cosmetics,群馬,関東,化粧品,草津温泉素材コスメ,Kusatsu onsen-source cosmetics,,,,
+cos_gm01,株式会社草津温泉浴剤製造所,Kusatsu Onsen Cosmetics,群馬,関東,化粧品,草津温泉の湯の花を使った入浴剤の製造,Kusatsu onsen bath-salt manufacturer,,,,
 cos_km01,南阿蘇オーガニック,Aso Mineral Water Cosme,熊本,九州,化粧品,阿蘇のミネラル水コスメ,Aso mineral-water cosmetics,,,,
